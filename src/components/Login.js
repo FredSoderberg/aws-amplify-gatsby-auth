@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from 'gatsby'
-import { navigate } from '@reach/router'
-import { setUser, isLoggedIn } from '../utils/auth'
-import Error from './Error'
-import { Auth } from 'aws-amplify'
+import { navigate } from '@reach/router';
+import { Auth } from 'aws-amplify';
+import { Link } from 'gatsby';
+import React from "react";
+import { isLoggedIn, setUser } from '../utils/auth';
+import Error from './Error';
 
 class Login extends React.Component {
   state = {
@@ -40,6 +40,7 @@ class Login extends React.Component {
     return (
       <div>
         <h1>Sign In</h1>
+        <h2>Updated</h2>
         {this.state.error && <Error errorMessage={this.state.error}/>}
         <div style={styles.formContainer}>
          <input
